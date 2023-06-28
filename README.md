@@ -12,6 +12,7 @@ Clone the package and
 `cd ldmx-event-display`
 
 Install the relevant packages
+
 `npm install phoenix-ui-components`
 
 `npm install phoenix-event-display`
