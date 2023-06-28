@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
 
+## Installation
+
+Make sure you have [Node.js](https://nodejs.org/en/download/package-manager)
+Install angular cli v 15.2.8
+`npm i install -g @angular/cli@15.2.8`
+Clone the package and
+`cd ldmx-event-display`
+Install the relevant packages
+`npm install phoenix-ui-components`
+`npm install phoenix-event-display`
+`npm install -D @types/three`
+`npm install -D @types/dat.gui`
+
+Start the server:
+`ng start`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
