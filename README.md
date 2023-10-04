@@ -1,5 +1,9 @@
 # LdmxEventDisplay
 
+
+![Screen Shot 2023-10-04 at 4 13 15 PM](https://github.com/pbutti/ldmx-event-display/assets/25535240/02d835de-b4d9-43b0-8989-f89ab4d2e8d2)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
 
 ## Installation
