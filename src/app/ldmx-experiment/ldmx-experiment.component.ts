@@ -7,9 +7,9 @@ import { Configuration, PhoenixLoader, PresetView, ClippingSetting, PhoenixMenuN
   templateUrl: './ldmx-experiment.component.html',
   styleUrls: ['./ldmx-experiment.component.scss']
 })
-export class LdmxExperimentComponent implements OnInit {
+export class LdmxExperimentComponent {
 
-  /** The root Phoenix menu node. */
+/** The root Phoenix menu node. */
   phoenixMenuRoot = new PhoenixMenuNode("Phoenix Menu");
 
   constructor(private eventDisplay: EventDisplayService) { }
@@ -26,13 +26,13 @@ export class LdmxExperimentComponent implements OnInit {
         new PresetView('Right View', [0, 0, 12000], [0, 0, 5000], 'right-cube', ClippingSetting.On, 90, 90)
       ],
       // default view with x, y, z of the camera and then x, y, z of the point it looks at
-      defaultView: [4000, 0, 4000, 0, 0 ,0],
+      defaultView: [-2000, 0, -2000, 0, 0 ,0],
       phoenixMenuRoot: this.phoenixMenuRoot,
       // Event data to load by default
       defaultEventFile: {
         // (Assuming the file exists in the `src/assets` directory of the app)
-        eventFile: 'assets/jive_xml_event_data.xml',
-        eventType: 'jivexml'
+        eventFile: 'assets/defaultEvents.json',
+        eventType: 'json'
       },
     }
 
@@ -40,7 +40,8 @@ export class LdmxExperimentComponent implements OnInit {
     this.eventDisplay.init(configuration);
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
-    this.eventDisplay.loadGLTFGeometry('assets/ldmx_v14.gltf', 'Detector');
+    this.eventDisplay.loadGLTFGeometry('assets/ldmx_v14.gltf',"sub-detector");
   }
 
 }
+
